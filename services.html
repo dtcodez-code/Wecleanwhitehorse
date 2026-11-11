@@ -13,8 +13,8 @@
 --light: #f8faf7;
 --white: #ffffff;
 }
-body { background-color: var(--light); color: var(--dark); line-height:
-1.6; }
+body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
 /* Navigation Bar Layout */
 nav { background: var(--white); padding: 20px 5%; display: flex;
 justify-content: space-between; align-items: center; box-shadow: 0 2px
@@ -23,13 +23,13 @@ justify-content: space-between; align-items: center; box-shadow: 0 2px
 text-transform: uppercase; letter-spacing: 0.5px; }
 .logo-text span { color: var(--gold); display: block; font-size: 11px;
 letter-spacing: 1px; margin-top: -2px; }
-.nav-links { display: flex; gap: 25px; list-style: none; align-items:
-center; }
+.nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--dark); font-weight:
 600; font-size: 15px; }
 .nav-links a:hover { color: var(--gold); }
 .nav-phone { font-weight: 700; color: var(--green); text-decoration:
 none; font-size: 15px; }
+
 /* Action Buttons */
 .btn { background-color: var(--green); color: var(--white); padding: 12px
 28px; font-size: 14px; border: none; border-radius: 50px; cursor: pointer;
@@ -38,27 +38,30 @@ text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
 .btn:hover { background-color: #1c3729; }
 .btn-gold { background-color: var(--gold); }
 .btn-gold:hover { background-color: #b08e36; }
+
 /* General Section Structure */
-section { padding: 60px 10%; text-align: center; background:
-var(--white); }
+section { padding: 60px 10%; text-align: center; background: var(--white); }
 .section-title { font-size: 36px; font-weight: 800; margin-bottom: 15px;
 color: var(--green); text-transform: uppercase; }
 .section-subtitle { font-size: 18px; color: #556158; max-width: 700px;
 margin: 0 auto 50px auto; }
+
 /* Grids & Frameworks */
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit,
 minmax(240px, 1fr)); gap: 25px; }
 .card { background: var(--light); padding: 25px; border-radius: 12px;
-border: 1px solid #e1e7e3; text-align: left; border-top: 4px solid
-var(--gold); }
+border: 1px solid #e1e7e3; text-align: left; border-top: 4px solid var(--gold); }
 .card h3 { font-size: 19px; margin-bottom: 12px; color: var(--green);
 text-transform: uppercase; }
 .card p { color: #556158; font-size: 14px; }
+
 /* Image Placeholder Blocks */
 .img-placeholder { width: 100%; height: 180px; object-fit: cover;
 border-radius: 8px; margin-bottom: 20px; border: 1px solid #cbd2ce; }
+
 /* Crop helper class to completely clip white margins/labels out */
 .cropped-img { object-position: center top !important; }
+
 /* Message CTA Block */
 .message-cta { background: #f2f6f3; border: 2px dashed var(--gold);
 padding: 40px; border-radius: 12px; margin: 40px auto 0 auto; max-width:
@@ -67,6 +70,7 @@ padding: 40px; border-radius: 12px; margin: 40px auto 0 auto; max-width:
 24px; text-transform: uppercase; }
 .message-cta p { font-size: 16px; margin-bottom: 25px; color:
 var(--dark); font-weight: 600; }
+
 /* Structural Footer Layer matching your exact structure */
 footer { background-color: var(--green); color: var(--white); padding:
 60px 10% 30px 10%; text-align: left; border-top: 5px solid var(--gold); }
@@ -78,14 +82,14 @@ minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
 line-height: 1.5; }
 .social-link-btn { display: inline-block; background: var(--white);
 color: var(--green); padding: 12px 24px; border-radius: 40px;
-text-decoration: none; font-weight: 700; font-size: 14px; margin-top: 5px;
-}
+text-decoration: none; font-weight: 700; font-size: 14px; margin-top: 5px; }
 .footer-bottom { border-top: 1px solid #3c6b51; padding-top: 20px;
 display: flex; justify-content: space-between; align-items: center;
 flex-wrap: wrap; color: #a4bfae; font-size: 13px; }
 </style>
 </head>
 <body>
+
 <!-- Top Navigation Header -->
 <nav>
 <div class="logo-text">We Clean<span>Whitehorse</span></div>
@@ -96,16 +100,18 @@ flex-wrap: wrap; color: #a4bfae; font-size: 13px; }
 <li><a href="policies.html">Policies</a></li>
 </ul>
 <div class="nav-right">
-<span class="nav-phone">📞 Call: (867) 334-9892</span>
+<a href="tel:+18673349892" class="nav-phone">📞 Call: (867) 334-9892</a>
 <a href="booking.html" class="btn">Book Now</a>
 </div>
 </nav>
-/* Services Detailed Showcase Section */
+
+<!-- Services Detailed Showcase Section -->
 <section>
 <h2 class="section-title">Our Specialized Services</h2>
 <p class="section-subtitle">Detail is our priority. Explore our full
 array of property maintenance, specialized deep sanitization, and
 automotive cleaning provisions built across the Yukon.</p>
+
 <div class="grid-4">
 <div class="card">
 <img src="images/image_0WuFUd.png.jpg" alt="Home Cleaning"
@@ -114,6 +120,7 @@ class="img-placeholder">
 <p>Standard routine dusting, sweeping, mopping, and structural surface
 details built beautifully for your household rhythm.</p>
 </div>
+
 <div class="card">
 <img src="images/image_Wkfh1F.png.jpg" alt="Office Cleaning"
 class="img-placeholder">
@@ -121,6 +128,7 @@ class="img-placeholder">
 <p>Consistent, professional workplace maintenance to optimize
 productivity fields and ensure clean commercial footprints.</p>
 </div>
+
 <div class="card">
 <img src="images/image_fxKK3W.png.jpg" alt="Deep Cleaning"
 class="img-placeholder">
@@ -128,27 +136,31 @@ class="img-placeholder">
 <p>A completely detailed scrub down targeting grime build-up, behind
 appliances, and long-term surface restoration.</p>
 </div>
+
 <div class="card">
-<img src="images/image_2RQyQj.png.jpg" alt="Move In & Out"
+<img src="images/image_2RQyQj.png.jpg" alt="Move In &amp; Out"
 class="img-placeholder">
-<h3>Move In & Out</h3>
+<h3>Move In &amp; Out</h3>
 <p>Perfect for real estate transitions, property switchovers, or ensuring
 complete tenant deposit reclamation.</p>
 </div>
+
 <div class="card">
-<img src="images/image_lqcMLa.png.jpg" alt="Car Wash & Interior
-Detailing" class="img-placeholder cropped-img">
-<h3>Car Wash & Interior Detailing</h3>
+<img src="images/image_lqcMLa.png.jpg" alt="Car Wash &amp; Interior Detailing"
+class="img-placeholder cropped-img">
+<h3>Car Wash &amp; Interior Detailing</h3>
 <p>Complete professional exterior washing paired with intensive, deep
 interior auto vacuuming and conditioning care.</p>
 </div>
+
 <div class="card">
-<img src="images/image_jeOEIZ.png.jpg" alt="Carpet & Couch Cleaning"
+<img src="images/image_jeOEIZ.png.jpg" alt="Carpet &amp; Couch Cleaning"
 class="img-placeholder">
-<h3>Carpet & Couch Cleaning</h3>
+<h3>Carpet &amp; Couch Cleaning</h3>
 <p>Intensive fabric fiber steam treatments to lift stains, odors, and
 embedded pollutants safely out of furniture layers.</p>
 </div>
+
 <div class="card">
 <img src="images/image_kywX4J.png.jpg" alt="Pet Hair Removal"
 class="img-placeholder">
@@ -156,6 +168,7 @@ class="img-placeholder">
 <p>Specialized extraction techniques to clear dense dander, allergens,
 and animal fur from difficult textures.</p>
 </div>
+
 <div class="card">
 <img src="images/image_ZVrN2J.png.jpg" alt="Commercial Cleaning"
 class="img-placeholder cropped-img">
@@ -164,22 +177,22 @@ class="img-placeholder cropped-img">
 across institutional facilities.</p>
 </div>
 </div>
+
 <div class="message-cta">
 <h3>Have questions about our cleaning packages?</h3>
 <p>If you need a major deep clean but worry it will take multiple days or
 break your budget, don't sweat it! Send us a message anyway—we are always
 happy to discuss your specific needs, customize a plan, and find a price
 or timeline that works perfectly for you.</p>
-<div style="display:flex; justify-content:center; gap:20px;
-flex-wrap:wrap;">
+<div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
 <a href="sms:18673349892" class="btn">💬 Text (867) 334-9892</a>
-<a href="mailto:wecleanwhitehorse@gmail.com" class="btn btn-gold">✉
-Email Our Team</a>
-<a href="https://facebook.com" target="_blank" class="btn"
-style="background:#1877f2;">👍 DM on Facebook</a>
+<a href="mailto:wecleanwhitehorse@gmail.com" class="btn btn-gold">✉ Email Our Team</a>
+<a href="https://www.facebook.com/share/1MkcjgTdQD/" target="_blank"
+class="btn" style="background:#1877f2;">👍 DM on Facebook</a>
 </div>
 </div>
 </section>
+
 <footer>
 <div class="footer-grid">
 <div class="footer-col">
@@ -188,22 +201,26 @@ style="background:#1877f2;">👍 DM on Facebook</a>
 <p>✉ <strong>Email:</strong> wecleanwhitehorse@gmail.com</p>
 <p>📍 <strong>Location:</strong> Whitehorse, YT, Canada</p>
 </div>
+
 <div class="footer-col">
 <h3>Opening Hours</h3>
-<p><strong>Monday - Friday:</strong> 24 Hours</p>
-<p><strong>Saturday - Sunday:</strong> 24 Hours</p>
+<p><strong>Monday - Friday:</strong> 9 AM - 9 PM</p>
+<p><strong>Saturday - Sunday:</strong> 9 AM - 9 PM</p>
 </div>
+
 <div class="footer-col">
 <h3>Connect With Us</h3>
 <p>Send a direct message through our official social media page:</p>
-<a href="https://facebook.com" target="_blank"
+<a href="https://www.facebook.com/share/1MkcjgTdQD/" target="_blank"
 class="social-link-btn">Facebook: weclean whitehorse</a>
 </div>
+
 <div class="footer-col">
 <h3>Areas We Serve</h3>
 <p>Whitehorse Proper • Porter Creek • Riverdale • Whistle Bend</p>
 </div>
 </div>
+
 <div class="footer-bottom">
 <div>&copy; 2026 We Clean Whitehorse. All rights reserved.</div>
 <div>Detail is our priority</div>
