@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Get a Quote | We Clean Whitehorse</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+ :root { --gold: #c5a043; --green: #284e3a; --dark: #1b3326; --light: #f8faf7; --white: #ffffff; }
+ body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+ nav { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(40,78,58,0.08); position: sticky; top: 0; z-index: 1000; }
+ .logo-text { font-size: 22px; font-weight: 800; color: var(--green); text-transform: uppercase; }
+ .logo-text span { color: var(--gold); display: block; font-size: 11px; letter-spacing: 1px; margin-top: -2px; }
+ .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+ .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; }
+ .nav-right { display: flex; align-items: center; gap: 15px; }
+ .btn { background-color: var(--green); color: var(--white); padding: 12px 28px; font-size: 14px; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: 700; text-transform: uppercase; text-align: center; }
+ .btn:hover { background-color: #1c3729; }
+ .btn-gold { background-color: var(--gold); }
+ .fb-nav-btn { display: inline-flex; align-items: center; justify-content: center; background: #1877f2; color: white; width: 38px; height: 38px; border-radius: 50%; text-decoration: none; font-weight: bold; font-size: 16px; }
+ .fb-nav-btn:hover { background: #145dbf; }
+ section { padding: 40px 5%; display: flex; justify-content: center; align-items: center; }
+ .form-wrapper { width: 100%; max-width: 650px; background: var(--white); padding: 40px; border-radius: 16px; border: 1px solid #e1e7e3; box-shadow: 0 10px 30px rgba(40,78,58,0.05); }
+ .form-wrapper h2 { color: var(--green); margin-bottom: 25px; text-transform: uppercase; font-size: 26px; text-align: center; }
+ .form-group { margin-bottom: 20px; text-align: left; }
+ .form-group label { display: block; font-size: 13px; font-weight: 700; color: var(--green); margin-bottom: 6px; text-transform: uppercase; }
+ .form-control { width: 100%; padding: 12px; border: 1px solid #cbd2ce; background: var(--light); border-radius: 8px; font-size: 15px; }
+ .action-flex { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
+ .action-flex button, .action-flex a { flex: 1; min-width: 180px; padding: 15px; text-align: center; }
+ footer { background-color: var(--green); color: var(--white); padding: 60px 10% 30px 10%; text-align: left; border-top: 5px solid var(--gold); margin-top: 50px; }
+ .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
+ .footer-col h3 { font-size: 15px; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
+ .footer-col p { color: #cbdcd1; font-size: 14px; margin-bottom: 10px; }
+ .footer-col ul { list-style: none; }
+ .footer-col ul li { margin-bottom: 10px; }
+ .footer-col ul li a { color: #cbdcd1; text-decoration: none; font-size: 14px; }
+ .social-link-btn { display: inline-block; background: var(--white); color: var(--green); padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 14px; margin-top: 5px; }
+ .footer-bottom { border-top: 1px solid #3c6b51; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; color: #a4bfae; font-size: 13px; }
+ </style>
+</head>
+<body>
+ <nav>
+ <div class="logo-text">We Clean<span>Whitehorse</span></div>
+ <ul class="nav-links">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="services.html">Services</a></li>
+ <li><a href="about.html">About Us</a></li>
+ <li><a href="policies.html">Policies</a></li>
+ </ul>
+ <div class="nav-right">
+ <a href="https://www.facebook.com/people/WE-CLEAN-Whitehorse/61594572195384/" target="_blank" class="fb-nav-btn" title="Visit our Facebook Page">f</a>
+ <a href="booking.html" class="btn">Book Now</a>
+ </div>
+ </nav>
+ 
+ <section>
+ <div class="form-wrapper">
+ <h2>Get a Quote</h2>
+ <form id="quoteForm">
+ <div class="form-group"><label>Your Name *</label><input type="text" id="custName" class="form-control" required placeholder="Enter full name"></div>
+ <div class="form-group"><label>Contact Phone Number or Email *</label><input type="text" id="custContact" class="form-control" required placeholder="Enter phone line or email"></div>
+ 
+ <div class="form-group">
+ <label>Select Service Type *</label>
+ <select id="bService" class="form-control" onchange="toggleRooms()">
+ <option value="Home Cleaning">Home Cleaning</option>
+ <option value="Office Cleaning">Office Cleaning</option>
+ <option value="Deep Cleaning">Deep Cleaning</option>
+ <option value="Move In & Out">Move In & Out Cleaning</option>
+ <option value="Car Wash & Interior Detailing">Car Wash & Interior Detailing</option>
+ <option value="Carpet & Couch Cleaning">Carpet & Couch Cleaning</option>
+ <option value="Pet Hair Removal">Pet Hair Removal</option>
+ <option value="Commercial Cleaning">Commercial Cleaning</option>
+ </select>
+ </div>
+ 
+ <!-- Room Container wrapper targeting dynamic visibility -->
+ <div id="roomContainer">
+ <div class="form-group">
+ <label>Total Rooms</label>
+ <select id="bRooms" class="form-control">
+ <option value="1 Room">1 Room / Area</option>
+ <option value="2 Rooms">2 Rooms</option>
+ <option value="3 Rooms" selected>3 Rooms</option>
+ <option value="4 Rooms">4 Rooms</option>
+ <option value="5+ Rooms">5+ Rooms</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label>Total Bathrooms</label>
+ <select id="bBaths" class="form-control">
+ <option value="1 Bathroom">1 Bathroom</option>
+ <option value="2 Bathrooms" selected>2 Bathrooms</option>
+ <option value="3 Bathroom">3 Bathrooms</option>
+ <option value="4+ Bathrooms">4+ Bathrooms</option>
+ </select>
+ </div>
+ </div>
+ 
+ <div class="form-group"><label>Special Notes</label><textarea id="bNotes" class="form-control" rows="3" placeholder=""></textarea></div>
+ 
+ <div class="action-flex">
+ <button type="button" class="btn" onclick="submitText()">💬 Submit via Text</button>
+ <button type="button" class="btn btn-gold" onclick="submitEmail()">✉ Submit via Email</button>
+ </div>
+ </form>
+ </div>
+ </section>
+ 
+ <footer>
+ <div class="footer-grid">
+ <div class="footer-col">
+ <h3>Get In Touch</h3>
+ <p>💬 <strong>Text:</strong> (867) 334-9892</p>
+ <p>✉ <strong>Email:</strong> wecleanwhitehorse@gmail.com</p>
+ <p>📍 <strong>Location:</strong> Whitehorse, YT, Canada</p>
+ </div>
+ <div class="footer-col">
+ <h3>Opening Hours</h3>
+ <p><strong>Monday - Friday:</strong> 24 Hours</p>
+ <p><strong>Saturday - Sunday:</strong> 24 Hours</p>
+ </div>
+ <div class="footer-col">
+ <h3>Connect With Us</h3>
+ <p>Send a direct message through our official social media page:</p>
+ <a href="https://www.facebook.com/people/WE-CLEAN-Whitehorse/61594572195384/" target="_blank" class="social-link-btn">Facebook: WE CLEAN Whitehorse</a>
+ </div>
+ <div class="footer-col">
+ <h3>Areas We Serve</h3>
+ <p>Whitehorse Proper • Porter Creek • Riverdale • Whistle Bend</p>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <div>&copy; 2026 We Clean Whitehorse. All rights reserved.</div>
+ <div>Detail is our priority</div>
+ </div>
+ </footer>
+
+ <script>
+ function toggleRooms() {
+ const svc = document.getElementById('bService').value;
+ const container = document.getElementById('roomContainer');
+ 
+ if (svc === 'Car Wash & Interior Detailing' ||
+ svc === 'Carpet & Couch Cleaning' ||
+ svc === 'Pet Hair Removal' ||
+ svc === 'Commercial Cleaning') {
+ container.style.display = 'none';
+ } else {
+ container.style.display = 'block';
+ }
+ }
+ 
+ function buildQuoteMsg() {
+ const name = document.getElementById('custName').value;
+ const contact = document.getElementById('custContact').value;
+ const svc = document.getElementById('bService').value;
+ const visible = document.getElementById('roomContainer').style.display !== 'none';
+ 
+ if (!name || !contact) { alert("Please complete required fields (*)"); return null; }
+ 
+ let message = `WE CLEAN WHITEHORSE QUOTE INQUIRY:\n• Name: ${name}\n• Contact: ${contact}\n• Service: ${svc}\n`;
+ if (visible) {
+ message += `• Specs: ${document.getElementById('bRooms').value} / ${document.getElementById('bBaths').value}\n`;
+ }
+ message += `• Notes: ${document.getElementById('bNotes').value || "None"}`;
+ return message;
+ }
+ 
+ function submitText() { 
+ const m = buildQuoteMsg(); 
+ if (m) window.location.href = `sms:+18673349892?&body=${encodeURIComponent(m)}`; 
+ }
+ function submitEmail() { 
+ const m = buildQuoteMsg(); 
+ if (m) window.location.href = `mailto:wecleanwhitehorse@gmail.com Inquiry&body=${encodeURIComponent(m)}`; 
+ }
+ 
+ window.onload = function() {
+ toggleRooms();
+ };
+ </script>
+</body>
+</html>
+
