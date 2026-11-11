@@ -1,142 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>We Clean Whitehorse | Professional Cleaning Services</title>
- <style>
- * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
- :root {
- --gold: #c5a043;
- --green: #284e3a;
- --dark: #1b3326;
- --light: #f8faf7;
- --white: #ffffff;
- }
- body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
- nav { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(40,78,58,0.08); position: sticky; top: 0; z-index: 1000; }
- .logo-text { font-size: 22px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: 0.5px; }
- .logo-text span { color: var(--gold); display: block; font-size: 11px; letter-spacing: 1px; margin-top: -2px; }
- .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
- .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; transition: 0.2s; }
- .nav-links a:hover { color: var(--gold); }
- .nav-phone { font-weight: 700; color: var(--green); text-decoration: none; font-size: 15px; }
- .btn { background-color: var(--green); color: var(--white); padding: 12px 28px; font-size: 14px; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
- .btn:hover { background-color: #1c3729; }
- .btn-gold { background-color: var(--gold); }
- .btn-gold:hover { background-color: #b08e36; }
- header { padding: 100px 10%; background: linear-gradient(135deg, #f2f6f3 0%, #e3ebe6 100%); text-align: center; border-bottom: 4px solid var(--gold); }
- header h1 { font-size: 50px; font-weight: 800; margin-bottom: 20px; color: var(--green); text-transform: uppercase; }
- header p { font-size: 19px; max-width: 800px; margin: 0 auto 35px auto; color: #33443a; }
- .hero-badges { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; font-weight: 600; color: var(--green); }
- section { padding: 70px 10%; text-align: center; background: var(--white); }
- .section-title { font-size: 32px; font-weight: 800; margin-bottom: 15px; color: var(--green); text-transform: uppercase; }
- .section-subtitle { font-size: 17px; color: #556158; max-width: 700px; margin: 0 auto 50px auto; }
- .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
- .diff-card { text-align: center; padding: 20px; }
- .diff-icon { width: 50px; height: 50px; background: #f2f6f3; color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 20px; font-weight: bold; border: 1px solid #e1e7e3; }
- .diff-card h3 { color: var(--green); margin-bottom: 10px; font-size: 20px; text-transform: uppercase; }
- .diff-card p { color: #556158; font-size: 15px; }
- .contact-cta-box { background: #f2f6f3; border: 2px dashed var(--gold); padding: 40px; border-radius: 12px; margin-top: 40px; text-align: center; }
- .contact-cta-box h3 { color: var(--green); margin-bottom: 15px; font-size: 24px; text-transform: uppercase; }
- .contact-cta-box p { font-size: 16px; margin-bottom: 20px; color: var(--dark); font-weight: 600; }
- footer { background-color: var(--green); color: var(--white); padding: 60px 10% 30px 10%; text-align: left; border-top: 5px solid var(--gold); }
- .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
- .footer-col h3 { font-size: 15px; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
- .footer-col p { color: #cbdcd1; font-size: 14px; margin-bottom: 10px; }
- .footer-col ul { list-style: none; }
- .footer-col ul li { margin-bottom: 10px; }
- .footer-col ul li a { color: #cbdcd1; text-decoration: none; font-size: 14px; transition: 0.2s; }
- .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
- .social-link-btn { display: inline-block; background: var(--white); color: var(--green); padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 14px; margin-top: 5px; transition: 0.3s; }
- .social-link-btn:hover { background: var(--gold); color: var(--white); }
- .footer-bottom { border-top: 1px solid #3c6b51; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; color: #a4bfae; font-size: 13px; }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We Clean Whitehorse | Professional Cleaning Services</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    :root {
+      --gold: #c5a043;
+      --green: #284e3a;
+      --dark: #1b3326;
+      --light: #f8faf7;
+      --white: #ffffff;
+    }
+    body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+    nav { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(40,78,58,0.08); position: sticky; top: 0; z-index: 1000; }
+    .logo-text { font-size: 22px; font-weight: 800; color: var(--green); text-transform: uppercase; letter-spacing: 0.5px; }
+    .logo-text span { color: var(--gold); display: block; font-size: 11px; letter-spacing: 1px; margin-top: -2px; }
+    .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; transition: 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-phone { font-weight: 700; color: var(--green); text-decoration: none; font-size: 15px; }
+    .btn { background-color: var(--green); color: var(--white); padding: 12px 28px; font-size: 14px; border: none; border-radius: 50px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.2s; }
+    .btn:hover { background-color: #1c3729; }
+    .btn-gold { background-color: var(--gold); }
+    .btn-gold:hover { background-color: #b08e36; }
+    header { padding: 100px 10%; background: linear-gradient(135deg, #f2f6f3 0%, #e3ebe6 100%); text-align: center; border-bottom: 4px solid var(--gold); }
+    header h1 { font-size: 50px; font-weight: 800; margin-bottom: 20px; color: var(--green); text-transform: uppercase; }
+    header p { font-size: 19px; max-width: 800px; margin: 0 auto 35px auto; color: #33443a; }
+    .hero-badges { display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; font-weight: 600; color: var(--green); }
+    section { padding: 70px 10%; text-align: center; background: var(--white); }
+    .section-title { font-size: 32px; font-weight: 800; margin-bottom: 15px; color: var(--green); text-transform: uppercase; }
+    .section-subtitle { font-size: 17px; color: #556158; max-width: 700px; margin: 0 auto 50px auto; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .diff-card { text-align: center; padding: 20px; }
+    .diff-icon { width: 50px; height: 50px; background: #f2f6f3; color: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 20px; font-weight: bold; border: 1px solid #e1e7e3; }
+    .diff-card h3 { color: var(--green); margin-bottom: 10px; font-size: 20px; text-transform: uppercase; }
+    .diff-card p { color: #556158; font-size: 15px; }
+    .contact-cta-box { background: #f2f6f3; border: 2px dashed var(--gold); padding: 40px; border-radius: 12px; margin-top: 40px; text-align: center; }
+    .contact-cta-box h3 { color: var(--green); margin-bottom: 15px; font-size: 24px; text-transform: uppercase; }
+    .contact-cta-box p { font-size: 16px; margin-bottom: 20px; color: var(--dark); font-weight: 600; }
+    footer { background-color: var(--green); color: var(--white); padding: 60px 10% 30px 10%; text-align: left; border-top: 5px solid var(--gold); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h3 { font-size: 15px; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
+    .footer-col p { color: #cbdcd1; font-size: 14px; margin-bottom: 10px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: #cbdcd1; text-decoration: none; font-size: 14px; transition: 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+    .social-link-btn { display: inline-block; background: var(--white); color: var(--green); padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 700; font-size: 14px; margin-top: 5px; transition: 0.3s; }
+    .social-link-btn:hover { background: var(--gold); color: var(--white); }
+    .footer-bottom { border-top: 1px solid #3c6b51; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; color: #a4bfae; font-size: 13px; }
+  </style>
 </head>
 <body>
- <nav>
- <div class="logo-text">We Clean<span>Whitehorse</span></div>
- <ul class="nav-links">
- <li><a href="index.html" style="color: var(--gold);">Home</a></li>
- <li><a href="services.html">Services</a></li>
- <li><a href="about.html">About Us</a></li>
- <li><a href="policies.html">Policies</a></li>
- </ul>
- <div class="nav-right">
- <span class="nav-phone">💬 Text: (867) 334-9892</span>
- <a href="booking.html" class="btn">Book Now</a>
- </div>
- </nav>
- <header>
- <h1>Cleaning Service<br><span style="color: var(--gold); font-size: 32px; display:block; margin-top:10px;">Detail is our priority</span></h1>
- <p>With an experienced team and modern equipment, we ensure every corner of your room is thoroughly and hygienically cleaned. Your premium professional cleaning option across the Whitehorse area.</p>
- <a href="quote.html" class="btn btn-gold">Get An Instant Quote</a>
- <div class="hero-badges">
- <div>✔ Experienced Local Team</div>
- <div>✔ Modern Equipment</div>
- <div>✔ Detail-Oriented Cleaning</div>
- </div>
- </header>
- <section>
- <h2 class="section-title">Why Choose Us</h2>
- <p class="section-subtitle">We make keeping your space clean completely hassle-free. Here is what you can count on every single time we visit.</p>
- <div class="grid-3">
- <div class="diff-card">
- <div class="diff-icon">⏰</div>
- <h3>On-Time Arrival</h3>
- <p>No waiting around or wondering where your cleaner is. We respect your schedule and arrive exactly when we say we will.</p>
- </div>
- <div class="diff-card">
- <div class="diff-icon">✔</div>
- <h3>Job Done Right</h3>
- <p>No cutting corners or half-done chores. We work hard and pay attention to the details to leave your home or office looking spotless.</p>
- </div>
- <div class="diff-card">
- <div class="diff-icon">💰</div>
- <h3>Affordable Rates</h3>
- <p>Great cleaning shouldn't break the bank. We offer fair, straightforward pricing with no surprise fees or hidden costs.</p>
- </div>
- </div>
- <div class="contact-cta-box">
- <h3>Ready to schedule your clean?</h3>
- <p>Send us a text or email and we will get back to you as soon as possible.</p>
- <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
- <a href="sms:+18673349892" class="btn">💬 Text (867) 334-9892</a>
- <a href="mailto:wecleanwhitehorse@gmail.com" class="btn btn-gold">✉ Email Us Now</a>
- <a href="https://facebook.com" target="_blank" class="btn" style="background:#1877f2;">👍 DM on Facebook</a>
- </div>
- </div>
- </section>
- <footer>
- <div class="footer-grid">
- <div class="footer-col">
- <h3>Get In Touch</h3>
- <p>💬 <strong>Text:</strong> (867) 334-9892</p>
- <p>✉ <strong>Email:</strong> wecleanwhitehorse@gmail.com</p>
- <p>📍 <strong>Location:</strong> Whitehorse, YT, Canada</p>
- </div>
- <div class="footer-col">
- <h3>Opening Hours</h3>
- <p><strong>Monday - Friday:</strong> 24 Hours</p>
- <p><strong>Saturday - Sunday:</strong> 24 Hours</p>
- </div>
- <div class="footer-col">
- <h3>Connect With Us</h3>
- <p>Send a direct message through our official social media page:</p>
- <a href="https://facebook.com" target="_blank" class="social-link-btn">Facebook: WE CLEAN Whitehorse</a>
- </div>
- <div class="footer-col">
- <h3>Areas We Serve</h3>
- <ul>
- <li><a href="quote.html">Get a Quote</a></li>
- <li><a href="booking.html">Book a Cleaning Spot</a></li>
- <li><a href="services.html">Our Services Grid</a></li>
- </ul>
- </div>
- </div>
- <div class="footer-bottom">
- <p>&copy; 2026 We Clean Whitehorse. All rights reserved.</p>
- </div>
- </footer>
+  <nav>
+    <div class="logo-text">We Clean<span>Whitehorse</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" style="color: var(--gold);">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="policies.html">Policies</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+18673349892" class="nav-phone">📞 Call: (867) 334-9892</a>
+      <a href="booking.html" class="btn">Book Now</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Cleaning Service<br><span style="color: var(--gold); font-size: 32px; display:block; margin-top:10px;">Detail is our priority</span></h1>
+    <p>With an experienced team and modern equipment, we ensure every corner of your room is thoroughly and hygienically cleaned. Your premium professional cleaning option across the Whitehorse area.</p>
+    <a href="quote.html" class="btn btn-gold">Get An Instant Quote</a>
+    <div class="hero-badges">
+      <div>✔ Experienced Local Team</div>
+      <div>✔ Modern Equipment</div>
+      <div>✔ Detail-Oriented Cleaning</div>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Why Choose Us</h2>
+    <p class="section-subtitle">We make keeping your space clean completely hassle-free. Here is what you can count on every single time we visit.</p>
+    <div class="grid-3">
+      <div class="diff-card">
+        <div class="diff-icon">⏰</div>
+        <h3>On-Time Arrival</h3>
+        <p>No waiting around or wondering where your cleaner is. We respect your schedule and arrive exactly when we say we will.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">✔</div>
+        <h3>Job Done Right</h3>
+        <p>No cutting corners or half-done chores. We work hard and pay attention to the details to leave your home or office looking spotless.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">💰</div>
+        <h3>Affordable Rates</h3>
+        <p>Great cleaning shouldn't break the bank. We offer fair, straightforward pricing with no surprise fees or hidden costs.</p>
+      </div>
+    </div>
+    <div class="contact-cta-box">
+      <h3>Ready to schedule your clean?</h3>
+      <p>Send us a text or email and we will get back to you as soon as possible.</p>
+      <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+        <a href="sms:+18673349892" class="btn">💬 Text (867) 334-9892</a>
+        <a href="mailto:wecleanwhitehorse@gmail.com" class="btn btn-gold">✉ Email Us Now</a>
+        <a href="https://www.facebook.com/share/1MkcjgTdQD/" target="_blank" class="btn" style="background:#1877f2;">👍 DM on Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Get In Touch</h3>
+        <p>💬 <strong>Text:</strong> (867) 334-9892</p>
+        <p>✉ <strong>Email:</strong> wecleanwhitehorse@gmail.com</p>
+        <p>📍 <strong>Location:</strong> Whitehorse, YT, Canada</p>
+      </div>
+      <div class="footer-col">
+        <h3>Opening Hours</h3>
+        <p><strong>Monday - Friday:</strong> 9 AM - 9 PM</p>
+        <p><strong>Saturday - Sunday:</strong> 9 AM - 9 PM</p>
+      </div>
+      <div class="footer-col">
+        <h3>Connect With Us</h3>
+        <p>Send a direct message through our official social media page:</p>
+        <a href="https://www.facebook.com/share/1MkcjgTdQD/" target="_blank" class="social-link-btn">Facebook: WE CLEAN Whitehorse</a>
+      </div>
+      <div class="footer-col">
+        <h3>Areas We Serve</h3>
+        <ul>
+          <li><a href="quote.html">Get a Quote</a></li>
+          <li><a href="booking.html">Book a Cleaning Spot</a></li>
+          <li><a href="services.html">Our Services Grid</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 We Clean Whitehorse. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
